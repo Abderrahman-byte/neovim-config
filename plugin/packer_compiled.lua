@@ -74,6 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["lir.nvim"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/lir.nvim",
+    url = "https://github.com/christianchiarulli/lir.nvim"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/packer.nvim",
