@@ -12,7 +12,7 @@ filetype plugin indent on
 syntax on
 
 " TABS
-set tabstop=4
+se tabstop=4
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 
@@ -20,9 +20,9 @@ set shiftwidth=4
 lua require('plugins')
 
 augroup packer_user_config
-  autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+   autocmd!
+   autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 augroup end
 
 " THEMES
-colorscheme tokyonight
+" colorscheme tokyonight
