@@ -1,6 +1,9 @@
 local keymap = vim.keymap
 local nvim_tree = require("nvim-tree")
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 nvim_tree.setup {
   auto_reload_on_write = true,
   disable_netrw = false,
@@ -39,6 +42,29 @@ nvim_tree.setup {
     },
     icons = {
       webdev_colors = true,
+      glyphs = {
+        default = "",
+        symlink = "",
+        folder = {
+          arrow_open = "",
+          arrow_closed = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "U",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
     },
   },
   hijack_directories = {

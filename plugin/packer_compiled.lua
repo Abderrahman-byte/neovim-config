@@ -74,12 +74,27 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["ayu-vim"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/ayu-vim",
+    url = "https://github.com/ayu-theme/ayu-vim"
+  },
   delimitMate = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/opt/delimitMate",
     url = "https://github.com/Raimondi/delimitMate"
+  },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
+  },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["lir.nvim"] = {
     loaded = true,
@@ -104,6 +119,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
@@ -133,15 +149,32 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/opt/vim-auto-save",
     url = "https://github.com/907th/vim-auto-save"
+  },
+  ["vim-one"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vim-one",
+    url = "https://github.com/rakr/vim-one"
+  },
+  ["vim-python-pep8-indent"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/opt/vim-python-pep8-indent",
+    url = "https://github.com/Vimjas/vim-python-pep8-indent"
   }
 }
 
 time([[Defining packer_plugins]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'vim-auto-save', 'delimitMate'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-web-devicons'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'delimitMate', 'vim-auto-save'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

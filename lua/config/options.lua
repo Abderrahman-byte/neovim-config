@@ -14,4 +14,6 @@ vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 vim.opt.expandtab = true
 
-vim.cmd("colorscheme carbonfox")
+vim.opt.termguicolors = true
+
+vim.cmd("colorscheme github_dark")
