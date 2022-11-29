@@ -36,9 +36,9 @@ return packer.startup(function(use)
   -- My plugins here
   use 'wbthomason/packer.nvim' -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 
-  use { "kyazdani42/nvim-web-devicons", event = "VimEnter" }
+  use "kyazdani42/nvim-web-devicons"
 
   use {
       "nvim-lualine/lualine.nvim",
@@ -51,8 +51,6 @@ return packer.startup(function(use)
       requires = { "kyazdani42/nvim-web-devicons" },
   }
 
-  use "christianchiarulli/lir.nvim"
-
   -- Themes
   use 'folke/tokyonight.nvim'	
   use 'EdenEast/nightfox.nvim'
@@ -61,8 +59,14 @@ return packer.startup(function(use)
   use 'rakr/vim-one'
   use 'ayu-theme/ayu-vim'
 
-  -- Autosave files on certain events
-  use { "907th/vim-auto-save", event = "InsertEnter" }
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+
+  -- Show git change (change, delete, add) signs in vim sign column
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatic insertion and deletion of a pair of characters
   use { "Raimondi/delimitMate", event = "InsertEnter" }

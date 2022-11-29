@@ -96,10 +96,10 @@ _G.packer_plugins = {
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
   },
-  ["lir.nvim"] = {
+  ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/lir.nvim",
-    url = "https://github.com/christianchiarulli/lir.nvim"
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -116,11 +116,14 @@ _G.packer_plugins = {
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -142,13 +145,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
-  },
-  ["vim-auto-save"] = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/opt/vim-auto-save",
-    url = "https://github.com/907th/vim-auto-save"
   },
   ["vim-one"] = {
     loaded = true,
@@ -173,8 +169,7 @@ vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-web-devicons'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'delimitMate', 'vim-auto-save'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'delimitMate'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

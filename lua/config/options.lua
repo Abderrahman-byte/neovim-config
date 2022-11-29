@@ -16,4 +16,4 @@ vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
 
-vim.cmd("colorscheme github_dark")
+vim.cmd("colorscheme nightfox")
