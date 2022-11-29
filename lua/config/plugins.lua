@@ -38,12 +38,25 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
+  use {
+      "nvim-lualine/lualine.nvim",
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  }
+
+  -- Tree File Explorer
   use "kyazdani42/nvim-tree.lua"
   use "christianchiarulli/lir.nvim"
 
+  -- Themes
   use 'folke/tokyonight.nvim'	
+  use 'EdenEast/nightfox.nvim'
 
-  require("nvim-tree").setup()
+  -- Autosave files on certain events
+  use { "907th/vim-auto-save", event = "InsertEnter" }
+
+  -- Automatic insertion and deletion of a pair of characters
+    use { "Raimondi/delimitMate", event = "InsertEnter" }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
