@@ -65,6 +65,8 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
+  use 'lervag/vimtex'
+
   -- Show git change (change, delete, add) signs in vim sign column
   use "lewis6991/gitsigns.nvim"
 

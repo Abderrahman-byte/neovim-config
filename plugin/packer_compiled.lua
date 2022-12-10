@@ -157,6 +157,11 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/opt/vim-python-pep8-indent",
     url = "https://github.com/Vimjas/vim-python-pep8-indent"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 

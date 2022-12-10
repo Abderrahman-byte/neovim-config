@@ -16,4 +16,5 @@ vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
 
+vim.cmd('filetype plugin indent on')
 vim.cmd("colorscheme nightfox")
