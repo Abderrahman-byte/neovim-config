@@ -1,5 +1,6 @@
 require "config.options"
 require "config.plugins"
+require "config.telescope"
 require "config.nvim-tree"
 require "config.statusline"
 require "config.treesitter"

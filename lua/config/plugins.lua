@@ -64,7 +64,14 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  
+  use {
+    'nvim-telescope/telescope.nvim', 
+    tag = '0.1.0',
+    requires = { 'nvim-lua/plenary.nvim' },
+  }
 
+  -- Latex
   use 'lervag/vimtex'
 
   -- Show git change (change, delete, add) signs in vim sign column

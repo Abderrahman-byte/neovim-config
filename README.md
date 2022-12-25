@@ -8,6 +8,7 @@ this abderrahmane's config repository for neovim
 - [x] StatusLine 
 - [x] File Tree Explorer via nvim-tree
 - [x] Syntax highlighting with nvim-treesitter
+- [x] File fuzzer Telescope
 - [ ] Add auto-completion
-- [ ] git signs
+- [x] git signs
 - [ ] AutoSave vim-auto-save
