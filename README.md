@@ -2,7 +2,7 @@
 
 this abderrahmane's config repository for neovim
 
-## Feature
+## Features
 
 - [x] Plugin management with Packer
 - [x] StatusLine 
