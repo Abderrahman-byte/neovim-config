@@ -1,4 +1,4 @@
-# neovim-config
+# Neovim Config
 
 this abderrahmane's config repository for neovim
 
