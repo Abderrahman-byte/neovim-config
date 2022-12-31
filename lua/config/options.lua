@@ -5,6 +5,7 @@ vim.opt.showmode = true
 vim.opt.wildmenu = true
 vim.opt.mouse = ""
 vim.opt.title = true
+vim.opt.relativenumber = true
 
 vim.opt.syntax = "on"
 
