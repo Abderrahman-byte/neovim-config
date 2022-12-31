@@ -16,5 +16,13 @@ vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
 
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+
+vim.g.mapleader = " "
+
 vim.cmd('filetype plugin indent on')
 vim.cmd("colorscheme nightfox")

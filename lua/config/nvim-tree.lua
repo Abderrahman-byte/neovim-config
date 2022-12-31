@@ -139,6 +139,6 @@ nvim_tree.setup {
   },
 }
 
-keymap.set("n", "<space>s", function()
+keymap.set("n", "<leader>s", function()
   return require("nvim-tree").toggle(false, true)
 end, { silent = true, desc = "toggle nvim-tree" })
