@@ -9,6 +9,6 @@ this abderrahmane's config repository for neovim
 - [x] File Tree Explorer via nvim-tree
 - [x] Syntax highlighting with nvim-treesitter
 - [x] File fuzzer Telescope
-- [ ] Add auto-completion
+- [x] Add auto-completion
 - [x] git signs
 - [ ] AutoSave vim-auto-save
