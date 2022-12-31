@@ -64,13 +64,13 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  
     -- Telescope
   use {
     'nvim-telescope/telescope.nvim', 
     tag = '0.1.0',
     requires = { 'nvim-lua/plenary.nvim' },
   }
+  use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- Latex
   use 'lervag/vimtex'
