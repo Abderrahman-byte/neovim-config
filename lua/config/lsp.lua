@@ -15,6 +15,7 @@ lsp.ensure_installed({
     'jdtls',
     'angularls',
     'ansiblels',
+    'tsserver'
 })
 
 lsp.nvim_workspace()
