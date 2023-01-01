@@ -17,7 +17,7 @@ lsp.ensure_installed({
     'ansiblels',
     'tsserver',
     'sqlls',
-    'ltex'
+    'texlab'
 })
 
 lsp.nvim_workspace()
