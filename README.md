@@ -30,5 +30,5 @@ this abderrahmane's config repository for neovim.
 | [neoformat](https://github.com/sbdchd/neoformat) | Code Auto Formatting | 
 | [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim) | Auto complition and the LSP client working together nicely | 
 | [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) | Markdown Preview |
-| [tokyonight-nvim](https://github.com/folke/tokyonight.nvim) | Nice themes |
+| [tokyonight-nvim](https://github.com/folke/tokyonight.nvim) | A dark and light Neovim theme |
 
