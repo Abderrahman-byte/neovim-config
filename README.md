@@ -15,6 +15,7 @@ this abderrahmane's config repository for neovim.
 - Markdown Preview
 - **Latex** live compilation with preview
 - Auto Formatting
+- Commenting
 
 ## Plugins
 
@@ -31,4 +32,5 @@ this abderrahmane's config repository for neovim.
 | [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim) | Auto complition and the LSP client working together nicely | 
 | [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) | Markdown Preview |
 | [tokyonight-nvim](https://github.com/folke/tokyonight.nvim) | A dark and light Neovim theme |
+| [commentary.vim](https://github.com/tpope/vim-commentary) | Comment stuff out |
 
