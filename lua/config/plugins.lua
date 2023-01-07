@@ -110,9 +110,6 @@ return packer.startup(function(use)
 		},
 	})
 
-	-- Wiki
-	-- use("vimwiki/vimwiki")
-
 	-- Markdown Preview
 
 	use({
@@ -121,8 +118,8 @@ return packer.startup(function(use)
 		ft = { "markdown" },
 	})
 
-    -- Auto commenting
-    use("tpope/vim-commentary")
+	-- Auto commenting
+	use("tpope/vim-commentary")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
