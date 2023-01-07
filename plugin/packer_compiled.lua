@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/ayu-vim",
     url = "https://github.com/ayu-theme/ayu-vim"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -272,8 +277,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)

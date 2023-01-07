@@ -25,7 +25,5 @@ vim.opt.backup = false
 
 vim.g.mapleader = " "
 
-vim.g.vimwiki_global_ext = false
-
 vim.cmd("filetype plugin indent on")
 vim.cmd("colorscheme nightfox")
