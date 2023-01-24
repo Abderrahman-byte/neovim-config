@@ -18,6 +18,7 @@ lsp.ensure_installed({
     "tsserver",
     "sqlls",
     "texlab",
+    "dockerls",
 })
 
 lsp.nvim_workspace()
