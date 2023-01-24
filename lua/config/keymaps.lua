@@ -20,3 +20,5 @@ vim.keymap.set("v", "<Down>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("v", "<Left>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("v", "<Right>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set("v", "<Up>", "<Nop>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "Q", "<nop>")
