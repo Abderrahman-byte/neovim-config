@@ -57,9 +57,6 @@ return packer.startup(function(use)
     use("folke/tokyonight.nvim")
     use("EdenEast/nightfox.nvim")
     use("Mofiqul/dracula.nvim")
-    use("projekt0n/github-nvim-theme")
-    use("rakr/vim-one")
-    use("ayu-theme/ayu-vim")
 
     -- Treesitter
     use({

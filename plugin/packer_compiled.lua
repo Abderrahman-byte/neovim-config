@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["ayu-vim"] = {
-    loaded = true,
-    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/ayu-vim",
-    url = "https://github.com/ayu-theme/ayu-vim"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -130,11 +125,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
-  },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -232,11 +222,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-one"] = {
-    loaded = true,
-    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vim-one",
-    url = "https://github.com/rakr/vim-one"
   },
   ["vim-python-pep8-indent"] = {
     loaded = false,
