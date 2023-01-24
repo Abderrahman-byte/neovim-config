@@ -1,4 +1,3 @@
-vim.keymap.set("n", "<C-i>", ":Neoformat<CR>", {})
 vim.keymap.set("x", "<leader>p", '"_dP')
 vim.keymap.set("x", "<leader>d", '"_d')
 vim.keymap.set("n", "<leader>d", '"_d')
@@ -7,6 +6,8 @@ vim.keymap.set("n", "<leader>le", ":VimtexErrors<Cr>", {})
 vim.keymap.set("n", "<leader>j", ":bprevious<CR>")
 vim.keymap.set("n", "<leader>k", ":bnext<CR>")
 vim.keymap.set("n", "<leader>bc", ":bdelete<CR>")
+
+vim.keymap.set("n", "<C-i>", ":LspZeroFormat<CR>", {})
 
 -- Remove newbie crutches in Normal Mode
 vim.keymap.set("n", "<Down>", "<Nop>", { noremap = true, silent = true })

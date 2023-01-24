@@ -28,7 +28,6 @@ this abderrahmane's config repository for neovim.
 | [Telescope](https://github.com/nvim-telescope/telescope.nvim) | File fuzzer |
 | [vimtex](https://github.com/lervag/vimtex) | Latex live previw |
 | [gitsigns](https://github.com/lewis6991/gitsigns.nvim) | Git changes signs |
-| [neoformat](https://github.com/sbdchd/neoformat) | Code Auto Formatting | 
 | [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim) | Auto complition and the LSP client working together nicely | 
 | [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) | Markdown Preview |
 | [tokyonight-nvim](https://github.com/folke/tokyonight.nvim) | A dark and light Neovim theme |
