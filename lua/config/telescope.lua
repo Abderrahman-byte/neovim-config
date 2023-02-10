@@ -2,6 +2,24 @@ local builtin = require("telescope.builtin")
 
 local telescope = require("telescope")
 
+telescope.setup {
+    defaults = {
+        file_ignore_patterns = {
+            "node_modules/",
+            "target/",
+            "build/",
+            ".class",
+            ".jar",
+            ".war",
+            ".nar",
+            ".ear",
+            ".zip",
+            ".tar.gz",
+            ".rar",
+        }
+    }
+}
+
 telescope.load_extension("file_browser")
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
