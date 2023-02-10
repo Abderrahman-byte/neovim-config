@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 --  Auto formatting before save
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
-    command = ":LspZeroFormat",
+    command = ":silent! LspZeroFormat",
 })
 
 -- Center cursor on Insert Enter
