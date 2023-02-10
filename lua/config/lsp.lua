@@ -19,6 +19,7 @@ lsp.ensure_installed({
     "sqlls",
     "texlab",
     "dockerls",
+    "lemminx",
 })
 
 lsp.nvim_workspace()
