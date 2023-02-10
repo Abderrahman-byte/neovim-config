@@ -22,6 +22,8 @@ vim.opt.incsearch = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.undofile = true
+vim.opt.linebreak = true
 
 vim.g.mapleader = " "
 
