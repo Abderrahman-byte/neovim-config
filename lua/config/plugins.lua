@@ -83,9 +83,6 @@ return packer.startup(function(use)
     -- Python indent (follows the PEP8 style)
     use({ "Vimjas/vim-python-pep8-indent", ft = { "python" } })
 
-    -- Auto format
-    -- use({ "sbdchd/neoformat", cmd = { "Neoformat" } })
-
     -- LSP plugins
     use({
         "VonHeikemen/lsp-zero.nvim",
@@ -109,8 +106,11 @@ return packer.startup(function(use)
         },
     })
 
-    -- Markdown Preview
+    -- JavaLSP
 
+    use("mfussenegger/nvim-jdtls")
+
+    -- Markdown Preview
     use({
         "iamcco/markdown-preview.nvim",
         run = "cd app && npm install",
