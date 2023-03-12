@@ -4,18 +4,23 @@ local telescope = require("telescope")
 
 telescope.setup {
     defaults = {
+        layout_strategy = "horizontal",
+        layout_config = {
+            height = 0.8,
+            width = 0.9
+        },
         file_ignore_patterns = {
             "node_modules/",
             "target/",
             "build/",
-            ".class",
-            ".jar",
-            ".war",
-            ".nar",
-            ".ear",
-            ".zip",
-            ".tar.gz",
-            ".rar",
+            "*.class",
+            "*.jar",
+            "*.war",
+            "*.nar",
+            "*.ear",
+            "*.zip",
+            "*.tar.gz",
+            "*.rar",
         }
     }
 }
