@@ -34,7 +34,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
     command = ":normal zz",
 })
 
-vim.api.nvim_create_autocmd(
-    { "BufNewFile", "BufRead" },
-    { pattern = "*.jsp", command = "set ft=html" }
-)
+-- vim.api.nvim_create_autocmd(
+--     { "BufNewFile", "BufRead" },
+--     { pattern = "*.jsp", command = "set ft=html" }
+-- )

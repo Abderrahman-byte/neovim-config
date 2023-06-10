@@ -158,6 +158,14 @@ _G.packer_plugins = {
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neoformat = {
+    commands = { "Neoformat" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/opt/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
@@ -243,12 +251,24 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.api.nvim_create_user_command, 'Neoformat', function(cmdargs)
+          require('packer.load')({'neoformat'}, { cmd = 'Neoformat', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'neoformat'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('Neoformat ', 'cmdline')
+      end})
+time([[Defining lazy-load commands]], false)
+
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)

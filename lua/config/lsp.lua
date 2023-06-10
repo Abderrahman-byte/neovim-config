@@ -1,9 +1,11 @@
 local lsp = require("lsp-zero")
+
 lsp.preset("recommended")
 
 lsp.ensure_installed({
     "lua_ls",
-    "pyright",
+    -- "pyright",
+    "jedi_language_server",
     "marksman",
     "html",
     "cssls",
@@ -20,6 +22,7 @@ lsp.ensure_installed({
     "texlab",
     "dockerls",
     "lemminx",
+    "volar",
 })
 
 lsp.nvim_workspace()
