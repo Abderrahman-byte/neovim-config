@@ -20,7 +20,7 @@ local function create(path)
 end
 
 function Utils.open_file()
-    local buf = vim.fn.expand("%:p")
+    local buf = vim.fn.expand("%:.")
     local buf_dirname, _ = buf:match('^(.*/)([^/]-)$')
 
     vim.ui.input({ prompt = "Insert the file name: ", completion = "file", default = buf_dirname }, function(input)
@@ -35,15 +35,24 @@ function Utils.open_file()
 end
 
 function Utils.delete_current_file()
-    local buf = vim.fn.expand("%:p")
+    local buf = vim.fn.expand("%:.")
     local file = Path:new(buf)
 
-    vim.cmd("bdelete")
-    file:rm()
+    local prompt_select = "Remove ./" .. buf .. " ? y/N: "
+
+    vim.ui.input({ prompt = prompt_select, default = "y" }, function(input)
+        local answer = string.lower(input)
+
+        if answer == "y" or answer == "yes" then
+            vim.cmd("bdelete")
+            file:rm()
+        end
+    end)
+
 end
 
 function Utils.rename_file()
-    local buf = vim.fn.expand("%:p")
+    local buf = vim.fn.expand("%:.")
 
     vim.ui.input({ prompt = "Insert the file name: ", completion = "file", default = buf }, function(input)
         vim.cmd("redraw")
