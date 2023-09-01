@@ -128,6 +128,7 @@ return packer.startup(function(use)
         "tpope/vim-dadbod",
         requires = {
             "kristijanhusak/vim-dadbod-ui",
+            "kristijanhusak/vim-dadbod-completion"
         },
         config = function()
             require("config.dadbod").setup()

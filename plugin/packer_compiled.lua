@@ -242,6 +242,11 @@ _G.packer_plugins = {
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vim-dadbod",
     url = "https://github.com/tpope/vim-dadbod"
   },
+  ["vim-dadbod-completion"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vim-dadbod-completion",
+    url = "https://github.com/kristijanhusak/vim-dadbod-completion"
+  },
   ["vim-dadbod-ui"] = {
     loaded = true,
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
@@ -282,8 +287,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 vim.cmd [[au FileType python ++once lua require("packer.load")({'vim-python-pep8-indent'}, { ft = "python" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)

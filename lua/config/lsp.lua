@@ -42,5 +42,13 @@ lsp.setup()
 cmp.setup({
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
-    }
+    },
+    sources = {
+        { name = "nvim_lua" },
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "vim-dadbod-completion" },
+        { name = "path" },
+        { name = "buffer",               keyword_length = 5 },
+    },
 })
