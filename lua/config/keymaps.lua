@@ -36,3 +36,5 @@ end, { noremap = true })
 vim.keymap.set("n", "<leader>fm", function()
     utils.rename_file()
 end, { noremap = true })
+
+vim.keymap.set("n", "<leader>dbui", "<Cmd>DBUIToggle<Cr>", { noremap = true, silent = true })

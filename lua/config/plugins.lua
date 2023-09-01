@@ -4,7 +4,7 @@ local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP =
-    fn.system({ "git", "clone", "--depth", "2", "https://github.com/wbthomason/packer.nvim", install_path })
+        fn.system({ "git", "clone", "--depth", "2", "https://github.com/wbthomason/packer.nvim", install_path })
     print("Installing packer close and reopen Neovim...")
 end
 
@@ -35,8 +35,8 @@ packer.init({
 return packer.startup(function(use)
     -- My plugins here
     use("wbthomason/packer.nvim") -- Have packer manage itself
-    use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
-    use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
+    use("nvim-lua/popup.nvim")    -- An implementation of the Popup API from vim in Neovim
+    use("nvim-lua/plenary.nvim")  -- Useful lua functions used by lots of plugins
 
     use("kyazdani42/nvim-web-devicons")
 
@@ -122,6 +122,17 @@ return packer.startup(function(use)
 
     -- Auto commenting
     use("tpope/vim-commentary")
+
+    -- Database dadbad interface
+    use({
+        "tpope/vim-dadbod",
+        requires = {
+            "kristijanhusak/vim-dadbod-ui",
+        },
+        config = function()
+            require("config.dadbod").setup()
+        end,
+    })
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
