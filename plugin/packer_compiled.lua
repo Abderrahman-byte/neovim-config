@@ -252,6 +252,11 @@ _G.packer_plugins = {
     path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
     url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   },
+  ["vim-helm"] = {
+    loaded = true,
+    path = "/home/abderrahmane/.local/share/nvim/site/pack/packer/start/vim-helm",
+    url = "https://github.com/towolf/vim-helm"
+  },
   ["vim-python-pep8-indent"] = {
     loaded = false,
     needs_bufread = false,

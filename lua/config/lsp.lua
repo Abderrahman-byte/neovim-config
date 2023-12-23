@@ -1,6 +1,6 @@
 local lsp = require("lsp-zero")
 local cmp = require('cmp')
-
+local lspconfig = require('lspconfig')
 
 lsp.preset('recommended')
 
@@ -27,7 +27,8 @@ lsp.ensure_installed({
     "texlab",
     "tsserver",
     "volar",
-    -- "yamlls",
+    "helm_ls",
+    "yamlls",
     -- "pyright",
 })
 

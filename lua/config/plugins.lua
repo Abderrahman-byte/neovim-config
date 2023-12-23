@@ -135,6 +135,10 @@ return packer.startup(function(use)
         end,
     })
 
+    -- Vim-helm
+    use('towolf/vim-helm')
+
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
