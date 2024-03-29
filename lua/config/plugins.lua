@@ -121,7 +121,12 @@ return packer.startup(function(use)
     })
 
     -- Auto commenting
-    use("tpope/vim-commentary")
+    use({
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    })
 
     -- Database dadbad interface
     use({
