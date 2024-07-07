@@ -28,4 +28,4 @@ vim.opt.linebreak = true
 vim.g.mapleader = " "
 
 vim.cmd("filetype plugin indent on")
-vim.cmd("colorscheme nightfox")
+vim.cmd("colorscheme tokyonight-storm")

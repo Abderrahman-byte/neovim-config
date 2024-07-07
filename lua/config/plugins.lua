@@ -38,11 +38,19 @@ return packer.startup(function(use)
     use("nvim-lua/popup.nvim")    -- An implementation of the Popup API from vim in Neovim
     use("nvim-lua/plenary.nvim")  -- Useful lua functions used by lots of plugins
 
+    -- Themes
+    use("folke/tokyonight.nvim")
+    -- use("EdenEast/nightfox.nvim")
+    -- use("Mofiqul/dracula.nvim")
+
     use("kyazdani42/nvim-web-devicons")
 
     use({
         "nvim-lualine/lualine.nvim",
         requires = { "kyazdani42/nvim-web-devicons", opt = true },
+        options = {
+            theme = 'tokyonight-storm'
+        }
     })
 
     use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
@@ -52,11 +60,6 @@ return packer.startup(function(use)
         "kyazdani42/nvim-tree.lua",
         requires = { "kyazdani42/nvim-web-devicons" },
     })
-
-    -- Themes
-    use("folke/tokyonight.nvim")
-    use("EdenEast/nightfox.nvim")
-    use("Mofiqul/dracula.nvim")
 
     -- Treesitter
     use({
@@ -111,7 +114,7 @@ return packer.startup(function(use)
 
     -- JavaLSP
 
-    use("mfussenegger/nvim-jdtls")
+    -- use("mfussenegger/nvim-jdtls")
 
     -- Markdown Preview
     use({
@@ -143,6 +146,7 @@ return packer.startup(function(use)
     -- Vim-helm
     use('towolf/vim-helm')
 
+    -- use('Exafunction/codeium.vim')
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
