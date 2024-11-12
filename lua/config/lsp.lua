@@ -18,32 +18,39 @@ lsp_zero.extend_lspconfig({
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
+    automatic_installation = true,
     ensure_installed = {
         "angularls",
         "ansiblels",
-        "bashls",
         "clangd",
         "cmake",
-        "cssls",
-        "docker_compose_language_service",
-        "dockerls",
-        "emmet_language_server",
-        "eslint",
-        "gopls",
+        "lua_ls",
+        "bashls",
+
         "html",
-        "jdtls",
+        "emmet_ls",
+        "cssls",
+        "eslint",
+        "ts_ls",
+        "volar",
+        "emmet_language_server",
+
         "jedi_language_server",
+        -- "pyright",
+
+        -- Misc
         "jsonls",
         "lemminx",
-        "lua_ls",
-        "marksman",
         "sqlls",
-        "texlab",
-        "tsserver",
-        "volar@2.0.7",
-        "helm_ls",
         "yamlls",
-        "pyright",
+
+        "docker_compose_language_service",
+        "dockerls",
+        "helm_ls",
+        "gopls",
+        "jdtls",
+        "marksman",
+        -- "texlab",
     },
     handlers = {
         function(server_name)
@@ -53,35 +60,34 @@ require('mason-lspconfig').setup({
             require('lspconfig').volar.setup({})
         end,
 
-        tsserver = function()
+        ts_ls = function()
             local vue_typescript_plugin = require('mason-registry')
                 .get_package('vue-language-server')
                 :get_install_path()
                 .. '/node_modules/@vue/language-server'
                 .. '/node_modules/@vue/typescript-plugin'
 
-            require('lspconfig').tsserver.setup({
+            require('lspconfig').ts_ls.setup {
                 init_options = {
                     plugins = {
                         {
-                            name = "@vue/typescript-plugin",
+                            name = '@vue/typescript-plugin',
                             location = vue_typescript_plugin,
                             languages = { 'javascript', 'typescript', 'vue' }
                         },
-                    }
+                    },
                 },
                 filetypes = {
                     'javascript',
-                    'javascriptreact',
                     'javascript.jsx',
+                    'javascriptreact',
                     'typescript',
-                    'typescriptreact',
                     'typescript.tsx',
+                    'typescriptreact',
                     'vue',
                 },
-            })
+            }
         end,
-
     }
 })
 
