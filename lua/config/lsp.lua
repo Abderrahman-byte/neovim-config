@@ -23,7 +23,7 @@ require('mason-lspconfig').setup({
         "angularls",
         "ansiblels",
         "clangd",
-        "cmake",
+        -- "cmake",
         "lua_ls",
         "bashls",
 
@@ -57,7 +57,35 @@ require('mason-lspconfig').setup({
             require('lspconfig')[server_name].setup({})
         end,
         volar = function()
-            require('lspconfig').volar.setup({})
+            require('lspconfig').volar.setup({
+                init_options = {
+                    vue = {
+                        hybridMode = false,
+                    },
+                },
+                settings = {
+                    typescript = {
+                        inlayHints = {
+                            enumMemberValues = {
+                                enabled = true,
+                            },
+                            functionLikeReturnTypes = {
+                                enabled = true,
+                            },
+                            propertyDeclarationTypes = {
+                                enabled = true,
+                            },
+                            parameterTypes = {
+                                enabled = true,
+                                suppressWhenArgumentMatchesName = true,
+                            },
+                            variableTypes = {
+                                enabled = true,
+                            },
+                        },
+                    },
+                },
+            })
         end,
 
         ts_ls = function()
@@ -85,6 +113,23 @@ require('mason-lspconfig').setup({
                     'typescript.tsx',
                     'typescriptreact',
                     'vue',
+                },
+                settings = {
+                    typescript = {
+                        tsserver = {
+                            useSyntaxServer = false,
+                        },
+                        inlayHints = {
+                            includeInlayParameterNameHints = 'all',
+                            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                            includeInlayFunctionParameterTypeHints = true,
+                            includeInlayVariableTypeHints = true,
+                            includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                            includeInlayPropertyDeclarationTypeHints = true,
+                            includeInlayFunctionLikeReturnTypeHints = true,
+                            includeInlayEnumMemberValueHints = true,
+                        },
+                    },
                 },
             }
         end,
